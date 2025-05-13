@@ -1,0 +1,25 @@
+
+.loading-spinner {
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner 0.75s linear infinite;
+}
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+.custom-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.result-pre {
+    white-space: pre-wrap;
+    font-family: system-ui;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}

@@ -1,0 +1,232 @@
+.top-bar {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.job-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.offer-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0000000a;
+}
+.offer-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 24px #00000022;
+}
+
+.status-badge {
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  background: #00000014;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.vector-line {
+  width: 100%;
+  height: 1px;
+  background-color: #dee2e6;
+  margin: 2rem 0;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+  position: relative;
+  background: linear-gradient(120deg, #fff 70%, #f3f3f3 100%);
+  min-height: 100vh;
+}
+
+.frame .top-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 24px #00000014;
+  border-radius: 0 0 24px 24px;
+}
+
+.frame .title {
+  flex: 1;
+  font-weight: 500;
+  color: #000;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Roboto", Helvetica;
+}
+
+.frame .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #fff;
+}
+.frame .navbar a,
+.frame .tab {
+  color: #000;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.frame .navbar a:hover,
+.frame .tab:hover {
+  background: #00000014;
+  color: #222;
+}
+
+.frame .textfield {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #0000001a;
+}
+
+.frame .text {
+  flex: 1;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #00000080;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.frame .container,
+.frame .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.frame .primary {
+  display: flex;
+  width: 240px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #0000000a;
+  transition: background 0.2s;
+}
+.frame .primary:hover {
+  background: #222;
+}
+
+.frame .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.frame .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  flex-grow: 1;
+}
+
+.frame .icon-wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: #0000000d;
+  border-radius: 50px;
+}
+
+.frame .subtitle {
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #00000080;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.frame .contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  width: 100%;
+  border: 1px solid #000;
+}
+
+input, select, textarea {
+  border-radius: 6px;
+  border: 1px solid #00000022;
+  padding: 10px 12px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  width: 100%;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+button, .btn {
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 28px;
+  border: none;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+button:hover, .btn:hover {
+  background: #222;
+}
+
+@media (max-width: 768px) {
+  .frame .top-bar,
+  .frame .contents {
+    padding: 20px;
+  }
+
+  .frame .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .frame .row {
+    flex-direction: column;
+  }
+
+  .frame .input {
+    width: 100%;
+  }
+
+  .frame .top-bar {
+    border-radius: 0 0 12px 12px;
+  }
+}

@@ -1,0 +1,282 @@
+:root {
+    /* Couleurs */
+    --primary-color: #2c3e50;
+    --primary-dark: #1a252f;
+    --primary-light: #3d566e;
+    --secondary-color: #3498db;
+    --secondary-dark: #2980b9;
+    --accent-color: #e74c3c;
+    --accent-dark: #c0392b;
+    --light-bg: #f8f9fa;
+    --lighter-bg: #ffffff;
+    --dark-text: #2c3e50;
+    --darker-text: #1a252f;
+    --light-text: #7f8c8d;
+    --border-color: #e0e0e0;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --info-color: #9b59b6;
+    
+    /* Effets */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+/* Typographie */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--darker-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+/* Barre de navigation */
+.custom-top-bar {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.custom-top-bar .navbar-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+
+.custom-top-bar .btn-outline-dark {
+    color: white;
+    border-color: white;
+    transition: var(--transition);
+}
+
+.custom-top-bar .btn-outline-dark:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Cartes */
+.job-card, .candidate-card {
+    background: var(--lighter-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card::before, .candidate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.job-card:hover::before, .candidate-card:hover::before {
+    width: 6px;
+    background: var(--accent-color);
+}
+
+.job-card:hover, .candidate-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(52, 152, 219, 0.2);
+}
+
+.job-card h3, .candidate-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.job-card h3 {
+    font-size: 1.3rem;
+}
+
+.candidate-card h4 {
+    font-size: 1.15rem;
+}
+
+/* Boutons */
+.btn {
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-dark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Sections spéciales */
+.motivation-section {
+    background-color: rgba(52, 152, 219, 0.05);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+.documents-section a {
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Accordéon */
+.accordion {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-item {
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    background-color: rgba(248, 249, 250, 0.5);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background-color: var(--lighter-bg);
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.9em;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    font-size: 0.85rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.job-card, .candidate-card, .accordion-item {
+    animation: fadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.job-card:hover {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Styles pour les statuts */
+.statut-attente { color: var(--warning-color); background-color: rgba(243, 156, 18, 0.1); }
+.statut-accepte { color: var(--success-color); background-color: rgba(39, 174, 96, 0.1); }
+.statut-refuse { color: var(--accent-color); background-color: rgba(231, 76, 60, 0.1); }
+.statut-entretien { color: var(--info-color); background-color: rgba(155, 89, 182, 0.1); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .job-card, .candidate-card {
+        padding: 1.25rem;
+    }
+    
+    .accordion-button {
+        padding: 0.75rem 1rem;
+    }
+    
+    .accordion-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-top-bar .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+}

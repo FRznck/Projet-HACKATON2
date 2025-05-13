@@ -1,0 +1,41 @@
+.custom-navbar {
+  background: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+}
+
+.custom-section {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 60px 0;
+}
+
+.avatar-admin {
+  width: 100px;
+  height: 100px;
+  background: rgba(216, 216, 216, 0.5);
+}
+
+.metric-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.chip {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chip:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.graph-placeholder {
+  background: rgba(216, 216, 216, 0.5);
+  height: 300px;
+  border-radius: 6px;
+}

@@ -1,0 +1,134 @@
+.custom-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.custom-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: linear-gradient(rgba(15, 16, 16, 0.6), rgba(22, 139, 236, 0.6)), url('/frontend2/recru.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.custom-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-hero img.img-fluid {
+  display: none;
+}
+
+/* Style pour la section Connexion/Inscription */
+.bg-light {
+    background-color:rgb(248, 248, 250) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: #e9f5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #3498db;
+}
+
+/* Style pour le formulaire d'inscription */
+.form-section {
+    background-color:rgb(68, 87, 234);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    border-radius: 8px;
+    padding: 10px 25px;
+}
+
+.btn-outline-dark {
+    border-radius: 8px;
+    padding: 10px 25px;
+}
+
+#google-login-btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Style pour la section Premium */
+.bg-primary.bg-opacity-10 {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+}
+
+.premium-card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.badge.bg-primary {
+    background-color: #3498db !important;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 8px;
+}
+
+.btn-primary,
+.btn-outline-dark,
+.btn-success {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover,
+.btn-outline-dark:hover,
+.btn-success:hover {
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.15);
+}
+
+.btn-primary:active,
+.btn-outline-dark:active,
+.btn-success:active {
+    transform: scale(0.97) translateY(1px);
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.10);
+}

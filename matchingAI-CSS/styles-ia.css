@@ -1,0 +1,38 @@
+.top-bar {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.feature-image {
+  background-color: #d8d8d880;
+  height: 340px;
+  border-radius: 6px;
+}
+
+.tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 4px 8px;
+  border-radius: 6px 0 6px 0;
+}
+
+.vector-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+      height: auto;
+      padding: 1rem !important;
+  }
+  
+  .hero-image {
+      height: 200px;
+      margin-top: 1rem;
+  }
+}

@@ -1,0 +1,101 @@
+:root {
+  --bs-body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  --bs-primary: #000000;
+  --bs-secondary: #6c757d;
+}
+
+body {
+  padding-top: 100px;
+  background-color: #ffffff;
+}
+
+.custom-top-bar {
+  height: 80px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 0 1rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--bs-primary);
+}
+
+.job-card, .candidate-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.job-card:hover, .candidate-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.icon-wrapper {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1rem;
+}
+
+.custom-form .form-control {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+}
+
+.custom-form .btn {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.message-section {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+  }
+  
+  .custom-top-bar {
+      height: auto;
+      padding: 1rem;
+  }
+  
+  .navbar-brand {
+      font-size: 1.5rem;
+  }
+  
+  .job-card, .candidate-card {
+      margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+      padding-top: 80px;
+  }
+  
+  .section-title {
+      font-size: 1.75rem;
+  }
+}
