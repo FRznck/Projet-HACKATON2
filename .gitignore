@@ -1,5 +1,5 @@
 firebase-credentials/
-*.sql
+
 
 ia/.env
 # Dependencies
